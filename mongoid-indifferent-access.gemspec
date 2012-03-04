@@ -14,12 +14,12 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'mongoid-indifferent-access'
   s.version           = '0.0.1'
-  s.date              = '2012-03-03'
+  s.date              = '2012-03-04'
   s.rubyforge_project = 'mongoid-indifferent-access'
 
   ## Make sure your summary is short. The description may be as long
   ## as you like.
-  s.summary     = "A Mongoid Hash extension enabling 'indifferent access' so you can access keys as Strings or Symbols."
+  s.summary     = "A Mongoid Hash extension enabling 'indifferent access' so you can access keys using Strings or Symbols."
   s.description = s.summary
 
   ## List the primary authors. If there are a bunch of authors, it's probably
@@ -54,8 +54,9 @@ Gem::Specification.new do |s|
   # = MANIFEST =
   s.files = %w[
     Gemfile
+    README.md
     Rakefile
-    lib/mongoid_indifferent_access.rb
+    lib/mongoid-indifferent-access.rb
     mongoid-indifferent-access.gemspec
   ]
   # = MANIFEST =
