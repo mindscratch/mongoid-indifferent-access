@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'mongoid-indifferent-access'
   s.version           = '0.0.1'
-  s.date              = '2012-03-04'
+  s.date              = '2012-03-06'
   s.rubyforge_project = 'mongoid-indifferent-access'
 
   ## Make sure your summary is short. The description may be as long
@@ -54,10 +54,12 @@ Gem::Specification.new do |s|
   # = MANIFEST =
   s.files = %w[
     Gemfile
+    Gemfile.lock
     README.md
     Rakefile
-    lib/mongoid-indifferent-access.rb
+    lib/mongoid_indifferent_access.rb
     mongoid-indifferent-access.gemspec
+    spec/mongoid.yml
   ]
   # = MANIFEST =
 
