@@ -10,13 +10,6 @@ class MockSuper
 end
 
 class Guitar < MockSuper
-
-
-  # mock Mongoid::Document.field
-  def self.field(name, options={})
-    nil
-  end
-
   include Mongoid::Extensions::Hash::IndifferentAccess
 
   field :config, :type => Hash
