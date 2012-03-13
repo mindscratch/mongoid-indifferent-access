@@ -1,0 +1,24 @@
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - ruby-head
+  - jruby
+  - jruby-head
+env:
+  - JRUBY_OPTS="--1.9"
+  -
+branches:
+  except:
+    - moped-integration
+matrix:
+  exclude:
+    - rvm: 1.9.2
+      env: JRUBY_OPTS="--1.9"
+    - rvm: 1.9.3
+      env: JRUBY_OPTS="--1.9"
+    - rvm: ruby-head
+      env: JRUBY_OPTS="--1.9"
+    - rvm: jruby
+      env:
+    - rvm: jruby-head
+      env:
