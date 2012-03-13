@@ -7,6 +7,10 @@ A Mongoid Hash extension enabling "indifferent access" so you can access keys us
 a developer to not worry as to whether or not the keys are Strings or Symbols. Instead, by relying on ActiveSupport all Hashes can be
 accessed using whichever approach suites the developer.
 
+Ruby/JRuby
+----------
+Thanks to [travis-ci](http://travis-ci.org) this gem is tested against Ruby 1.9.2, 1.9.3 and JRuby 1.6.7.
+
 Usage
 -----
 
