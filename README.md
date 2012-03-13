@@ -1,4 +1,4 @@
-Mongoid Indifferent Access
+Mongoid Indifferent Access [![Build Status](https://secure.travis-ci.org/mindscratch/mongoid-indifferent-access.png?branch=master)](http://travis-ci.org/mindscratch/mongoid-indifferent-access)
 ==========================
 
 A Mongoid Hash extension enabling "indifferent access" so you can access keys using Strings or Symbols.
