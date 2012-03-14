@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'mongoid-indifferent-access'
   s.version           = '0.0.1'
-  s.date              = '2012-03-06'
+  s.date              = '2012-03-13'
   s.rubyforge_project = 'mongoid-indifferent-access'
 
   ## Make sure your summary is short. The description may be as long
@@ -59,7 +59,9 @@ Gem::Specification.new do |s|
     Rakefile
     lib/mongoid_indifferent_access.rb
     mongoid-indifferent-access.gemspec
+    spec/mongoid-indifferent-access/indifferent_access_spec.rb
     spec/mongoid.yml
+    spec/spec_helper.rb
   ]
   # = MANIFEST =
 
