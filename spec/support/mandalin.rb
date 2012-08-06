@@ -1,0 +1,2 @@
+class Mandalin < Guitar
+end
