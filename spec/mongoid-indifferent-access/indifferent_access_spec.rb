@@ -1,41 +1,69 @@
 require 'spec_helper'
-require 'mongoid_indifferent_access'
-require 'mongoid'
-
-# mocking some of what Mongoid::Document would provide
-# so the spec doesn't require having MongoDB running
-class MockSuper
-  attr_accessor :config
-  def self.field(name, options={})
-    nil
-  end
-end
-
-class Guitar < MockSuper
-  include Mongoid::Extensions::Hash::IndifferentAccess
-
-  field :config, :type => Hash
-end
+require 'support/guitar'
+require 'support/mandalin'
 
 module Mongoid::Extensions::Hash
 
   describe IndifferentAccess do
-    subject {
-      g = Guitar.new
-      g.config = {:value => 123}
-      g
-    }
+
+    before :each do
+      @subject = Guitar.new
+      @subject.config = {:value => 123}
+    end
 
     it "returns a value given a String as the key" do
-      subject.config["value"].should eq(123)
+      @subject.config["value"].should eq(123)
     end
 
     it "returns a value given a Symbol as the key" do
-      subject.config[:value].should eq(123)
+      @subject.config[:value].should eq(123)
     end
 
     it "returns nil given a non-existing key" do
-      subject.config[:non_existant].should be_nil
+      @subject.config[:non_existant].should be_nil
+    end
+
+    describe 'subclasses' do
+
+      before :each do
+        @sub_subject = Mandalin.new
+        @sub_subject.config = {:value => 123}
+      end
+
+      it "returns a value given a String as the key" do
+        @sub_subject.config["value"].should eq(123)
+      end
+
+      it "returns a value given a Symbol as the key" do
+        @sub_subject.config[:value].should eq(123)
+      end
+
+      it "returns nil given a non-existing key" do
+        @sub_subject.config[:non_existant].should be_nil
+      end
+
+      describe 'reload superclass' do
+
+        before :each do
+          load 'support/guitar.rb'
+          @sub_subject = Mandalin.new
+          @sub_subject.config = {:value => 123}
+        end
+
+        it "returns a value given a String as the key" do
+          @sub_subject.config["value"].should eq(123)
+        end
+
+        it "returns a value given a Symbol as the key" do
+          @sub_subject.config[:value].should eq(123)
+        end
+
+        it "returns nil given a non-existing key" do
+          @sub_subject.config[:non_existant].should be_nil
+        end
+
+      end
+
     end
 
   end
