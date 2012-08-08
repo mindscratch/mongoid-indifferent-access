@@ -1,12 +1,14 @@
 require 'spec_helper'
 
-#class Guitar
-#  include Mongoid::Document
-#  include Mongoid::Extensions::Hash::IndifferentAccess
-#
-#  field :config, :type => Hash
-#end
+class Guitar
+  include Mongoid::Document
+  include Mongoid::Extensions::Hash::IndifferentAccess
 
+  field :config, :type => Hash
+end
+
+class Mandalin < Guitar
+end
 
 module Mongoid::Extensions::Hash
 
