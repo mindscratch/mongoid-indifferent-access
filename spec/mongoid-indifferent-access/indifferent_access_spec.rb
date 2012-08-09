@@ -1,14 +1,6 @@
 require 'spec_helper'
-
-class Guitar
-  include Mongoid::Document
-  include Mongoid::Extensions::Hash::IndifferentAccess
-
-  field :config, :type => Hash
-end
-
-class Mandalin < Guitar
-end
+require 'support/guitar'
+require 'support/mandolin'
 
 module Mongoid::Extensions::Hash
 
@@ -34,7 +26,7 @@ module Mongoid::Extensions::Hash
     describe 'subclasses' do
 
       before :each do
-        @sub_subject = Mandalin.new
+        @sub_subject = Mandolin.new
         @sub_subject.config = {:value => 123}
       end
 
@@ -54,7 +46,7 @@ module Mongoid::Extensions::Hash
 
         before :each do
           load 'support/guitar.rb'
-          @sub_subject = Mandalin.new
+          @sub_subject = Mandolin.new
           @sub_subject.config = {:value => 123}
         end
 
