@@ -63,7 +63,7 @@ Gem::Specification.new do |s|
     spec/mongoid.yml
     spec/spec_helper.rb
     spec/support/guitar.rb
-    spec/support/mandalin.rb
+    spec/support/mandolin.rb
   ]
   # = MANIFEST =
 
