@@ -11,7 +11,7 @@ module Mongoid
             def self.field(name, options={})
               field = super(name, options)
 
-              if options[:type].name == 'Hash'
+              if options[:type] && options[:type].name == 'Hash'
                 getter_name = name.to_sym
                 setter_name = "#{getter_name}=".to_sym
 
