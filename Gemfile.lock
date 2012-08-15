@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mongoid-indifferent-access (0.0.3)
+    mongoid-indifferent-access (0.0.4)
       mongoid
 
 GEM
