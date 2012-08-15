@@ -3,7 +3,7 @@ module Mongoid
     module Hash
       module IndifferentAccess
 
-        VERSION = "0.0.3"
+        VERSION = "0.0.4"
 
         def self.included(klass)
           klass.class_eval do
