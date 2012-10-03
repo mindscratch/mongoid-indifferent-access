@@ -23,6 +23,14 @@ module Mongoid::Extensions::Hash
       @subject.config[:non_existant].should be_nil
     end
 
+    it "getter continues to work when model is frozen" do
+      @subject.attributes["config"] = {}
+      @subject.freeze
+      expect {
+        @subject.config
+      }.to_not raise_error
+    end
+
     describe 'subclasses' do
 
       before :each do
