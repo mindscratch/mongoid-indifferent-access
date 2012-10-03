@@ -32,7 +32,7 @@ module Mongoid
                 val = super()
                 unless val.nil? || val.is_a?(HashWithIndifferentAccess)
                   wrapped_hash = val.with_indifferent_access
-                  self.send(setter_name, wrapped_hash)
+                  self.send(setter_name, wrapped_hash) unless self.frozen?
                   val = wrapped_hash
                 end
                 val
