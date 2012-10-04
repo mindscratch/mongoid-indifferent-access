@@ -9,7 +9,10 @@ accessed using whichever approach suites the developer.
 
 Ruby/JRuby
 ----------
-Thanks to [travis-ci](http://travis-ci.org) this gem is tested against Ruby 1.9.2, 1.9.3 and JRuby 1.6.7.
+Thanks to [travis-ci](http://travis-ci.org) this gem is tested against Ruby 1.9.3 and JRuby 1.6.7.
+
+It should also continue work with Ruby 1.9.2 only if you're using Mongoid 2.4.x. As of Mongoid 3.x, Ruby 1.9.3 or newer is
+[required](http://mongoid.org/en/mongoid/docs/tips.html#ruby).
 
 Usage
 -----
@@ -61,3 +64,13 @@ puts result.data[:value]  # => 1.32
 puts result.data[:name]   # => "google"
 puts result.data["value"] # => 1.32
 ````
+
+Contributors
+------------
+
+I'd like to give a special shout out to those people who've submitted pull requests (which have been approved and merged):
+
+* [incorvia](https://github.com/incorvia)
+  * pulls: [1](https://github.com/mindscratch/mongoid-indifferent-access/pull/1), [2](https://github.com/mindscratch/mongoid-indifferent-access/pull/2)
+* [Luke Bergen](https://github.com/lukebergen)
+  * pulls: [4](https://github.com/mindscratch/mongoid-indifferent-access/pull/4)
