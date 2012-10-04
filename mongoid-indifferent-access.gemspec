@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'mongoid-indifferent-access'
-  s.version           = '0.0.5'
+  s.version           = '1.0.0'
   s.date              = '2012-10-03'
   s.rubyforge_project = 'mongoid-indifferent-access'
 
