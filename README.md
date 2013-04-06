@@ -14,6 +14,16 @@ Thanks to [travis-ci](http://travis-ci.org) this gem is tested against Ruby 1.9.
 It should also continue work with Ruby 1.9.2 only if you're using Mongoid 2.4.x. As of Mongoid 3.x, Ruby 1.9.3 or newer is
 [required](http://mongoid.org/en/mongoid/docs/tips.html#ruby).
 
+Installation
+------------
+
+The preferred installation method is by adding mongoid-indifferent-access to your Gemfile:
+
+    gem "mongoid-indifferent-access", require: "mongoid_indifferent_access"
+    
+The `require` is important. The gem name has hyphens but the directories use underscores (my bad), so Bundler can't figure
+out what to load exactly, so this helps it out.
+
 Usage
 -----
 
