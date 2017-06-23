@@ -1,3 +1,9 @@
+# Depraceted after many years of life!
+Mongo 5.0.2 supports indifferent access natively.
+
+https://jira.mongodb.org/browse/MONGOID-4124?jql=Participants%20%3D%20sahin
+
+
 Mongoid Indifferent Access [![Build Status](https://secure.travis-ci.org/mindscratch/mongoid-indifferent-access.png?branch=master)](http://travis-ci.org/mindscratch/mongoid-indifferent-access)
 ==========================
 
